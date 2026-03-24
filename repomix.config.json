@@ -1,0 +1,23 @@
+{
+  "output": {
+    "filePath": "repomix-output.xml",
+    "style": "xml"
+  },
+  "ignore": {
+    "customPatterns": [
+      "**/__pycache__/**",
+      "**/venv/**",
+      "**/.venv/**",
+      "**/models/**",
+      "**/templates/**",
+      "**/*.pt",
+      "**/*.onnx",
+      "**/*.png",
+      "**/*.jpg",
+      "**/*.pyc",
+      ".git/**"
+    ],
+    "useGitignore": true,
+    "useDefaultPatterns": true
+  }
+}
