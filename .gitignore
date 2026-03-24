@@ -1,0 +1,15 @@
+# Môi trường ảo (Nặng nhất)
+venv/
+.venv/
+env/
+
+# File xuất ra cho AI (Cực kỳ nặng)
+repomix-output.xml
+repomix-output.txt
+
+# File tạm của Python
+__pycache__/
+*.py[cod]
+
+# Dữ liệu nhạy cảm (nếu có dùng Supabase/Firebase)
+.env
