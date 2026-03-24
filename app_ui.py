@@ -99,9 +99,9 @@ if __name__ == "__main__":
     
     # 5. Setup hotkeys and start the bot's main loop in a background thread
     bot.setup_hotkeys()
-    bot_thread = threading.Thread(target=bot.main_loop, daemon=True)
-    bot_thread.start()
+    # bot_thread = threading.Thread(target=bot.main_loop, daemon=True)
+    # bot_thread.start()
 
     # 6. Start the UI event loop
-    app.after(100, app.update_ui_from_hotkey, None) # Start checking for hotkey state changes
+    app.after(1000, app.update_ui_from_hotkey, None) # Start checking for hotkey state changes
     app.mainloop()

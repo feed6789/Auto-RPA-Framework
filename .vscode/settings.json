@@ -1,0 +1,6 @@
+{
+    "python.analysis.extraPaths": [
+        "./tf-env/Lib/site-packages",
+        "./backend"
+    ]
+}

@@ -1,11 +1,13 @@
+import os
+os.environ['PADDLE_PDX_DISABLE_MODEL_SOURCE_CHECK'] = 'True'
 import keyboard
 import time
 import threading
-from src.vision.vision_engine import VisionEngine
-from src.input.human_controller import HumanController
-from src.wait.smart_wait import SmartWait
-from src.core.engine import WorkflowContext, WorkflowEngine
-from src.core.actions import WaitAndClickTemplateAction, YOLOInteractAction
+from backend.src.vision.vision_engine import VisionEngine
+from backend.src.input.human_controller import HumanController
+from backend.src.wait.smart_wait import SmartWait
+from backend.src.core.engine import WorkflowContext, WorkflowEngine
+from backend.src.core.actions import WaitAndClickTemplateAction, YOLOInteractAction
 
 class AutomationBot:
     def __init__(self):

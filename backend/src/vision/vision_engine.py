@@ -4,6 +4,8 @@ import mss
 from ultralytics import YOLO
 from paddleocr import PaddleOCR
 import os
+import logging
+logging.getLogger("ppocr").setLevel(logging.ERROR)
 
 # Suppress PaddleOCR logging unless it's an error
 os.environ['PP_OCR_LOG_LEVEL'] = '3'
@@ -31,7 +33,7 @@ class VisionEngine:
         try:
             # Initialize OCR for English. Add other languages like 'ch' if needed.
             # This will download models on first run.
-            self.ocr_reader = PaddleOCR(use_angle_cls=True, lang='en', show_log=False)
+            self.ocr_reader = PaddleOCR(use_angle_cls=True, lang='en')
             print("[Vision] PaddleOCR engine initialized.")
         except Exception as e:
             print(f"[Vision Error] Failed to initialize PaddleOCR: {e}")
