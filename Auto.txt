@@ -1,0 +1,1716 @@
+📄 README.md
+markdown
+# 🤖 RPA Framework - AI-Powered Automation Platform
+
+[![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
+[![Flutter](https://img.shields.io/badge/Flutter-3.16%2B-blue.svg)](https://flutter.dev/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
+> **A modern, AI-powered Robotic Process Automation (RPA) framework** that combines computer vision, human-like input simulation, and cross-platform automation. Built with Python backend and Flutter frontend.
+
+## 🎯 Overview
+
+RPA Framework enables you to automate repetitive tasks across web, desktop, and mobile applications. Unlike traditional RPA tools, it leverages AI computer vision to understand screen content and adapt to UI changes automatically.
+
+---
+
+## ✅ Current Implementation Status (Phase 0 - MVP)
+
+### Already Working
+| Module | Features | Status |
+|--------|----------|--------|
+| **Vision Engine** | YOLOv8 object detection, PaddleOCR, template matching, MSS screen capture | ✅ |
+| **Human Controller** | Bezier curve mouse movement, easing functions, micro-shivers, random delays | ✅ |
+| **Bot Core** | State management, hotkey control, micro-break simulation, error handling | ✅ |
+| **UI Dashboard** | CustomTkinter interface, real-time log viewer, control buttons | ✅ |
+
+### Files
+- `vision_engine.py` (110 lines) - AI vision processing
+- `human_controller.py` (75 lines) - Human-like input simulation
+- `main.py` (130 lines) - Bot core logic
+- `app_ui.py` (136 lines) - CustomTkinter dashboard
+- `models/best.pt` - Trained YOLOv8 model
+
+---
+
+## 🔄 Development Roadmap (by Priority)
+
+### Priority P0 - Critical (Must Have for v1.0)
+*These features are essential for stability and usability.*
+
+| Feature | Description | ETA |
+|---------|-------------|-----|
+| **Visual Workflow Debugger** | Screenshot timeline, action replay, live overlay, variable watch | Week 1-2 |
+| **Smart Wait Strategies** | Wait for element, text, pixel color, sound, network idle | Week 1-2 |
+| **Parallel Execution Manager** | Multi-workflow execution, resource pooling, queue management | Week 3-4 |
+| **Scheduled Screenshot Monitoring** | Bot health check, crash detection, auto-recovery | Week 3-4 |
+
+### Priority P1 - High Priority (Important for v1.0)
+*These features significantly improve productivity and accuracy.*
+
+| Feature | Description | ETA |
+|---------|-------------|-----|
+| **Workflow Recorder** | Record mouse/keyboard → auto-generate workflow | Week 5-6 |
+| **OCR + Vision Hybrid (Advanced)** | Multi-stage detection with confidence-based fallback | Week 5-6 |
+| **Multi-Profile Management** | Browser fingerprint, mouse pattern, schedule pattern | Week 7-8 |
+| **Telegram/Discord Commander** | Remote control via chat, real-time notifications | Week 7-8 |
+| **API Gateway & Webhook** | REST API for external triggers, webhook support | Week 9-10 |
+
+### Priority P2 - Medium Priority (Nice to Have for v1.0)
+*These features enhance functionality and user experience.*
+
+| Feature | Description | ETA |
+|---------|-------------|-----|
+| **Workflow Analytics Dashboard** | Success rate, execution time, error heatmap | Week 11-12 |
+| **Conditional Breakpoints** | Pause when conditions met (value, iteration, time) | Week 11-12 |
+| **Variable Injection & Data-Driven** | Run workflow with multiple data sets (CSV/JSON) | Week 13-14 |
+| **Browser Extension** | Capture web actions, generate selectors | Week 13-14 |
+| **Visual Scripting (No-Code)** | Drag-drop workflow builder | Week 15-16 |
+| **Export to Multiple Formats** | Video recording, PDF/HTML reports, Excel charts | Week 15-16 |
+
+### Priority P3 - Low Priority (Post v1.0)
+*Community-driven features and optimizations.*
+
+| Feature | Description | ETA |
+|---------|-------------|-----|
+| **Plugin System** | Community extensions with hooks | Post v1.0 |
+| **Cloud Model Zoo** | Share trained models for common apps | Post v1.0 |
+| **Screen Region Learning** | Adaptive search, confidence heatmap | Post v1.0 |
+| **Asset Management** | Centralized templates, models, credentials | Post v1.0 |
+| **Dependency Manager** | Workflow dependencies, circular detection | Post v1.0 |
+| **Test Mode & Simulation** | Dry run, mock data, sandbox environment | Post v1.0 |
+
+### 🔮 Future (Post v1.0 Advanced)
+*Advanced AI features requiring significant R&D.*
+
+| Feature | Description | Complexity |
+|---------|-------------|------------|
+| **AI Decision Engine** | Self-optimizing workflows using ML | ⭐⭐⭐⭐⭐ |
+| **Self-healing Workflows** | Automatically adapt to UI changes | ⭐⭐⭐⭐⭐ |
+| **Reinforcement Learning** | Learn optimal paths from user feedback | ⭐⭐⭐⭐ |
+| **Active Learning** | Improve models with user corrections | ⭐⭐⭐⭐ |
+| **Multi-model Ensemble** | Combine YOLO + Template + OCR | ⭐⭐⭐ |
+| **Custom CNN Training** | Train domain-specific models | ⭐⭐⭐⭐ |
+| **Multi-Tenancy & User Management** | Team workspaces, audit logs, quotas | ⭐⭐⭐⭐ |
+| **Human-in-the-Loop** | Approval steps, CAPTCHA solving, manual override | ⭐⭐⭐ |
+
+---
+
+## 📋 Core Capabilities (All Phases)
+
+### 🎯 Automation Drivers
+| Platform | Technology | Capabilities |
+|----------|------------|--------------|
+| **Web** | Playwright/Selenium | DOM automation, stealth mode, proxy rotation |
+| **Desktop** | PyAutoGUI + Win32/Quartz | UI automation, window management, image recognition |
+| **Mobile** | ADB + Appium | Android automation, touch events, screen capture |
+
+### 🧠 AI & Computer Vision
+- **Object Detection**: YOLOv8 for real-time object tracking
+- **OCR**: PaddleOCR for text extraction from any screen
+- **Template Matching**: OpenCV for pattern recognition
+- **Hybrid Detection (P1)**: Multi-stage OCR + YOLO fusion
+- **Custom Training (🔮)**: Fine-tune models for specific use cases
+
+### 📱 Flutter Frontend
+- **Cross-platform UI**: Windows, macOS, Linux, iOS, Android
+- **Real-time Dashboard**: Live log viewer, preview window
+- **Workflow Designer (P2)**: Drag-drop workflow builder
+- **Mobile Companion (P1)**: Control bots from your phone
+
+### ☁️ Hybrid Storage
+- **Local**: SQLite (offline-first, encrypted)
+- **Cloud**: Supabase (sync, multi-device, backup)
+- **Real-time Sync**: Automatic conflict resolution
+
+---
+
+## 📁 Project Structure
+rpa-framework/
+├── backend/ # Python backend
+│ ├── src/
+│ │ ├── core/ # Workflow engine & state machine
+│ │ ├── vision/ # AI vision modules
+│ │ │ ├── yolo_detector.py ✅
+│ │ │ ├── ocr_processor.py ✅
+│ │ │ ├── template_matcher.py ✅
+│ │ │ └── hybrid_detector.py 🔄 (P1)
+│ │ ├── automation/ # Automation drivers
+│ │ │ ├── web/ # Playwright/Selenium
+│ │ │ ├── desktop/ # PyAutoGUI
+│ │ │ └── mobile/ # ADB + Appium
+│ │ ├── input/ # Human-like input simulation ✅
+│ │ ├── recorder/ # Workflow recorder 🔄 (P1)
+│ │ ├── scheduler/ # Cron & event triggers 🔄 (P2)
+│ │ ├── debugger/ # Visual debugger 🔄 (P0)
+│ │ ├── wait/ # Smart wait strategies 🔄 (P0)
+│ │ ├── parallel/ # Parallel execution manager 🔄 (P0)
+│ │ ├── monitor/ # Screenshot monitoring 🔄 (P0)
+│ │ ├── analytics/ # Performance analytics 🔄 (P2)
+│ │ ├── api/ # API Gateway & Webhook 🔄 (P1)
+│ │ ├── visual_scripting/ # No-code builder 🔄 (P2)
+│ │ ├── database/ # SQLite + Supabase
+│ │ └── utils/ # Helpers & config
+│ ├── tests/
+│ └── requirements.txt
+│
+├── frontend/ # Flutter frontend
+│ ├── lib/
+│ │ ├── screens/ # Dashboard, designer, marketplace
+│ │ ├── services/ # API & WebSocket clients
+│ │ ├── models/ # Data models
+│ │ └── providers/ # State management (Riverpod)
+│ └── pubspec.yaml
+│
+├── extension/ # Browser extension (P2)
+├── models/ # Trained AI models
+├── templates/ # Template images
+├── docs/ # Documentation
+├── main.py # Headless bot entry ✅
+├── app_ui.py # CustomTkinter UI ✅
+└── README.md
+
+text
+
+---
+
+## 🛠️ Technology Stack
+
+| Layer | Technology | Purpose |
+|-------|------------|---------|
+| **Backend** | Python 3.10+ | Core automation logic |
+| **API** | FastAPI + WebSocket | Communication layer |
+| **Frontend** | Flutter 3.16+ | Cross-platform UI |
+| **AI/ML** | YOLOv8, PaddleOCR, OpenCV | Computer vision |
+| **Automation** | Playwright, PyAutoGUI, ADB | Platform drivers |
+| **Database** | SQLite, Supabase | Local + cloud storage |
+| **State** | Riverpod (Flutter) | Reactive UI |
+
+---
+
+## 🎮 Use Cases
+
+| Domain | Examples |
+|--------|----------|
+| **Work Automation** | Data entry, invoice processing, report generation |
+| **Web Automation** | Form filling, web scraping, UI testing |
+| **Game Automation** | Resource farming, macro recording, botting |
+| **Mobile Testing** | App testing, social media automation |
+| **Desktop Automation** | File operations, software installation |
+
+---
+
+## 📊 Success Metrics
+
+| Metric | Target (v1.0) | Current (MVP) | Impact |
+|--------|---------------|---------------|--------|
+| Execution Success Rate | >95% | ~85% | P0 + P1 features |
+| Object Detection Accuracy | >90% | ~85% | P1 hybrid vision |
+| Bot Crash Detection | <1 min | Not available | P0 monitoring |
+| Concurrent Workflows | 50+ | 1 | P0 parallel manager |
+| Time to First Workflow | <5 min | ~30 min | P1 recorder |
+| Debug Time | <2 min | ~15 min | P0 debugger |
+| Cross-Platform Support | 4 platforms | 1 (Windows) | P5 Flutter |
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Please read our [Contributing Guidelines](CONTRIBUTING.md).
+
+## 📄 License
+
+MIT License - see [LICENSE](LICENSE) file.
+
+📄 ARCHITECTURE.md
+markdown
+# 🏗️ System Architecture
+
+## High-Level Architecture
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│ FLUTTER FRONTEND │
+│ ┌───────────────────────────────────────────────────────────────────────────┐ │
+│ │ UI Layer (Riverpod) │ │
+│ │ ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌──────────┐ │ │
+│ │ │Dashboard │ │Designer │ │Monitor │ │Market │ │Debugger │ │ │
+│ │ │ (P0-P2) │ │ (P2) │ │ (P0-P2) │ │ (P2) │ │ (P0) │ │ │
+│ │ └──────────┘ └──────────┘ └──────────┘ └──────────┘ └──────────┘ │ │
+│ └───────────────────────────────────────────────────────────────────────────┘ │
+│ ┌───────────────────────────────────────────────────────────────────────────┐ │
+│ │ Service Layer │ │
+│ │ • WebSocket Client (Real-time logs, debug, monitoring) │ │
+│ │ • REST API Client (Workflow CRUD, triggers) │ │
+│ │ • Local Database (SQLite via drift) │ │
+│ │ • Sync Engine (Supabase Realtime) │ │
+│ └───────────────────────────────────────────────────────────────────────────┘ │
+└─────────────────────────────────────────────────────────────────────────────────┘
+│
+WebSocket (ws://) + REST (http://)
+│
+▼
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│ PYTHON BACKEND │
+│ ┌───────────────────────────────────────────────────────────────────────────┐ │
+│ │ FastAPI Application (Uvicorn) │ │
+│ │ ┌──────────────────┐ ┌──────────────────┐ ┌──────────────────┐ │ │
+│ │ │ WebSocket Manager│ │ REST Endpoints │ │ Auth Middleware │ │ │
+│ │ │ (logs, debug) │ │ (workflows/jobs) │ │ (JWT/Supabase) │ │ │
+│ │ └──────────────────┘ └──────────────────┘ └──────────────────┘ │ │
+│ └───────────────────────────────────────────────────────────────────────────┘ │
+│ │
+│ ┌───────────────────────────────────────────────────────────────────────────┐ │
+│ │ Core Modules (by Priority) │ │
+│ │ │ │
+│ │ ✅ COMPLETED (Phase 0) │ │
+│ │ ┌────────────┐ ┌────────────┐ ┌────────────┐ ┌────────────┐ │ │
+│ │ │ Vision │ │ Input │ │ Bot │ │ UI │ │ │
+│ │ │ Engine │ │ Controller │ │ Core │ │ (CTk) │ │ │
+│ │ └────────────┘ └────────────┘ └────────────┘ └────────────┘ │ │
+│ │ │ │
+│ │ 🔄 P0 - CRITICAL (Phase 1) │ │
+│ │ ┌────────────┐ ┌────────────┐ ┌────────────┐ ┌────────────┐ │ │
+│ │ │ Debugger │ │ Smart │ │ Parallel │ │ Monitor │ │ │
+│ │ │ (Visual) │ │ Wait │ │ Executor │ │ (Health) │ │ │
+│ │ └────────────┘ └────────────┘ └────────────┘ └────────────┘ │ │
+│ │ │ │
+│ │ 🔄 P1 - HIGH PRIORITY (Phase 2) │ │
+│ │ ┌────────────┐ ┌────────────┐ ┌────────────┐ ┌────────────┐ │ │
+│ │ │ Recorder │ │ Hybrid │ │ Multi- │ │ Commander │ │ │
+│ │ │ │ │ Vision │ │ Profile │ │ │ │ │
+│ │ └────────────┘ └────────────┘ └────────────┘ └────────────┘ │ │
+│ │ ┌────────────┐ │ │
+│ │ │ API │ │ │
+│ │ │ Gateway │ │ │
+│ │ └────────────┘ │ │
+│ │ │ │
+│ │ 🔄 P2 - MEDIUM PRIORITY (Phase 3) │ │
+│ │ ┌────────────┐ ┌────────────┐ ┌────────────┐ ┌────────────┐ │ │
+│ │ │ Analytics │ │ Breakpoint │ │ Data-Driven│ │ Browser │ │ │
+│ │ │ Dashboard │ │ │ │ │ │ Extension │ │ │
+│ │ └────────────┘ └────────────┘ └────────────┘ └────────────┘ │ │
+│ │ ┌────────────┐ ┌────────────┐ │ │
+│ │ │ Visual │ │ Export │ │ │
+│ │ │ Scripting │ │ Formats │ │ │
+│ │ └────────────┘ └────────────┘ │ │
+│ │ │ │
+│ │ 📋 P3 - LOW PRIORITY (Phase 4 - Post v1.0) │ │
+│ │ ┌────────────┐ ┌────────────┐ ┌────────────┐ ┌────────────┐ │ │
+│ │ │ Plugin │ │ Model │ │ Region │ │ Asset │ │ │
+│ │ │ System │ │ Zoo │ │ Learning │ │ Management │ │ │
+│ │ └────────────┘ └────────────┘ └────────────┘ └────────────┘ │ │
+│ │ ┌────────────┐ ┌────────────┐ │ │
+│ │ │ Dependency │ │ Test │ │ │
+│ │ │ Manager │ │ Mode │ │ │
+│ │ └────────────┘ └────────────┘ │ │
+│ │ │ │
+│ │ 🔮 FUTURE (Post v1.0 - Advanced) │ │
+│ │ ┌────────────┐ ┌────────────┐ ┌────────────┐ ┌────────────┐ │ │
+│ │ │ AI │ │ Self- │ │Reinforce- │ │ Active │ │ │
+│ │ │ Decision │ │ Healing │ │ ment │ │ Learning │ │ │
+│ │ └────────────┘ └────────────┘ └────────────┘ └────────────┘ │ │
+│ │ ┌────────────┐ ┌────────────┐ ┌────────────┐ │ │
+│ │ │ Multi- │ │ Multi- │ │ Human-in- │ │ │
+│ │ │ Model │ │ Tenancy │ │ the-Loop │ │ │
+│ │ │ Ensemble │ │ │ │ │ │ │
+│ │ └────────────┘ └────────────┘ └────────────┘ │ │
+│ └───────────────────────────────────────────────────────────────────────────┘ │
+└─────────────────────────────────────────────────────────────────────────────────┘
+│
+┌─────────────────────────────────┼─────────────────────────────────┐
+▼ ▼ ▼
+┌───────────────────┐ ┌───────────────────┐ ┌───────────────────┐
+│ SQLite (Local) │ │ Supabase (Cloud) │ │ ADB Bridge │
+│ • Workflows │ │ • User accounts │ │ • Android │
+│ • Logs │ │ • Sync metadata │ │ • Touch events │
+│ • Debug data │ │ • Templates │ │ • Screenshots │
+│ • Analytics │ │ • Models (Zoo) │ │ • UI hierarchy │
+│ • Monitoring │ │ • Webhooks │ │ │
+└───────────────────┘ └───────────────────┘ └───────────────────┘
+
+text
+
+---
+
+## Module Details (by Priority)
+
+### 🔄 P0 - Critical (Phase 1)
+
+#### 1. Visual Workflow Debugger (`src/debugger/`)
+
+```python
+class WorkflowDebugger:
+    """
+    Real-time debugging and visualization.
+    
+    Features:
+    - Screenshot timeline (before/after each action)
+    - Action replay with playback controls
+    - Live overlay (bounding boxes, click coordinates)
+    - Variable watch window
+    - Execution step-by-step
+    - Debug session storage
+    """
+    
+    def capture_state(self):
+        """Save current screen + variables + logs"""
+        pass
+    
+    def replay(self, session_id: str):
+        """Replay recorded execution"""
+        pass
+    
+    def show_overlay(self):
+        """Draw bounding boxes and info on screen"""
+        pass
+2. Smart Wait Strategies (src/wait/)
+python
+class SmartWait:
+    """
+    Intelligent waiting mechanisms.
+    
+    Strategies:
+    - wait_for_element (by vision/template/OCR)
+    - wait_for_text (appear/disappear)
+    - wait_for_pixel_color (change detection)
+    - wait_for_sound (game automation)
+    - wait_for_network_idle (web)
+    - wait_for_animation_complete
+    - wait_for_condition (custom lambda)
+    """
+    
+    def for_element(self, target, timeout=30, poll=0.5):
+        """Wait until element appears"""
+        pass
+    
+    def for_text(self, text, disappear=False, timeout=30):
+        """Wait for text to appear or disappear"""
+        pass
+3. Parallel Execution Manager (src/parallel/)
+python
+class ParallelExecutor:
+    """
+    Manage concurrent workflow execution.
+    
+    Features:
+    - Workflow queue with priority
+    - Resource pool (CPU, GPU, memory)
+    - Load balancing
+    - Deadlock detection
+    - Isolation between workflows
+    """
+    
+    def __init__(self, max_workers=10):
+        self.executor = ThreadPoolExecutor(max_workers)
+        self.queue = PriorityQueue()
+        self.active_workflows = {}
+    
+    async def submit(self, workflow, priority=5):
+        """Submit workflow to queue"""
+        pass
+    
+    def get_status(self):
+        """Return active and queued workflows"""
+        pass
+4. Scheduled Screenshot Monitoring (src/monitor/)
+python
+class BotHealthMonitor:
+    """
+    Monitor bot health via screenshots.
+    
+    Features:
+    - Periodic screenshot capture (every 30s)
+    - Baseline comparison (normal state)
+    - Crash detection (error popups, blue screen)
+    - Auto-recovery (restart bot)
+    - Alert notification
+    """
+    
+    def __init__(self, interval=30):
+        self.interval = interval
+        self.baseline = None
+    
+    def set_baseline(self, screenshot):
+        """Set normal state screenshot"""
+        pass
+    
+    def check_health(self):
+        """Compare current with baseline"""
+        pass
+    
+    def auto_recover(self):
+        """Attempt to restart bot"""
+        pass
+🔄 P1 - High Priority (Phase 2)
+5. Workflow Recorder (src/recorder/)
+python
+class WorkflowRecorder:
+    """
+    Record user actions and generate workflows.
+    
+    Records:
+    - Mouse movements, clicks, drags
+    - Keyboard input
+    - Screenshot on each action
+    - Timestamps and delays
+    
+    Output:
+    - JSON workflow definition
+    - YAML with metadata
+    - Python script (optional)
+    """
+    
+    def start_recording(self):
+        """Hook input events via pynput"""
+        pass
+    
+    def stop_and_generate(self):
+        """Convert recording to workflow"""
+        pass
+6. OCR + Vision Hybrid (Advanced) (src/vision/hybrid_detector.py)
+python
+class HybridDetector:
+    """
+    Combine multiple vision techniques with fallback.
+    
+    Strategies:
+    - OCR text → YOLO region → Template confirm (3-stage)
+    - YOLO detection → OCR read value
+    - Template fallback → OCR fallback → coordinate (confidence-based)
+    - Multi-stage with confidence threshold
+    
+    Returns higher accuracy than single method (target >99%).
+    """
+    
+    def detect_button_by_text(self, text: str, confidence=0.8):
+        """Multi-stage: OCR locate → YOLO verify → Template confirm"""
+        pass
+    
+    def read_dynamic_value(self, region_type: str):
+        """Detect region by YOLO, then OCR the value"""
+        pass
+7. Multi-Profile Management (src/profile/)
+python
+class ProfileManager:
+    """
+    Manage multiple identities to avoid detection.
+    
+    Profile includes:
+    - Browser fingerprint (user agent, resolution, timezone, language)
+    - Mouse pattern (speed, acceleration, curve intensity)
+    - Typing pattern (WPM, backspace frequency, pause distribution)
+    - Schedule pattern (active hours, break schedule)
+    - Network pattern (proxy, IP rotation)
+    """
+    
+    def load_profile(self, name: str):
+        """Load profile configuration"""
+        pass
+    
+    def apply_to_bot(self):
+        """Apply profile settings to running bot"""
+        pass
+    
+    def generate_random_profile(self):
+        """Create random realistic profile"""
+        pass
+8. Telegram/Discord Commander (src/commander/)
+python
+class BotCommander:
+    """
+    Remote control via chat platforms.
+    
+    Commands:
+    /start [workflow] - Start workflow
+    /stop - Emergency stop
+    /pause - Pause execution
+    /resume - Resume execution
+    /status - Current state and metrics
+    /log [lines] - Recent logs
+    /screenshot - Current screen
+    /stats - Performance metrics
+    /restart - Restart bot
+    /workflows - List available workflows
+    """
+    
+    async def handle_command(self, command: str, user_id: str):
+        """Process chat command with authentication"""
+        pass
+    
+    async def send_notification(self, message: str, level="info"):
+        """Send alert to user"""
+        pass
+9. API Gateway & Webhook (src/api/)
+python
+class APIGateway:
+    """
+    REST API for external integration.
+    
+    Endpoints:
+    POST /api/execute - Execute workflow
+    POST /api/webhook/{id} - Trigger via webhook
+    GET /api/status/{execution_id} - Check status
+    POST /api/data - Push data to bot
+    GET /api/workflows - List workflows
+    POST /api/schedule - Create schedule
+    """
+    
+    async def execute_workflow(self, workflow_id, data=None):
+        """Execute workflow via API"""
+        pass
+    
+    async def webhook_handler(self, request):
+        """Handle incoming webhook"""
+        pass
+🔄 P2 - Medium Priority (Phase 3)
+10. Workflow Analytics Dashboard (src/analytics/)
+python
+class AnalyticsEngine:
+    """
+    Track and visualize bot performance.
+    
+    Metrics:
+    - Success rate by action/workflow
+    - Average execution time
+    - CPU/Memory usage timeline
+    - Error heatmap (which step fails most)
+    - Peak hours analysis
+    - Performance trends over time
+    """
+    
+    def record_execution(self, workflow_id, result, metrics):
+        """Store execution data"""
+        pass
+    
+    def generate_report(self, timeframe: str, format="html"):
+        """Generate performance report"""
+        pass
+11. Conditional Breakpoints (src/debugger/breakpoint.py)
+python
+class BreakpointManager:
+    """
+    Pause execution when conditions met.
+    
+    Conditions:
+    - value > threshold / < threshold / == value
+    - iteration count reached
+    - time of day
+    - screen content matches template
+    - error occurs
+    - custom lambda expression
+    """
+    
+    def on_value(self, var_name, operator, value):
+        """Break when variable meets condition"""
+        pass
+    
+    def on_screen(self, template_path, confidence=0.8):
+        """Break when screen matches template"""
+        pass
+12. Variable Injection & Data-Driven (src/engine/data_driven.py)
+python
+class DataDrivenRunner:
+    """
+    Run workflow with multiple data sets.
+    
+    Data sources:
+    - CSV file (each row = one execution)
+    - JSON array
+    - Database query (SQLite, Supabase)
+    - API endpoint (REST)
+    - Excel spreadsheet
+    """
+    
+    def run_with_csv(self, workflow, csv_path):
+        """Execute workflow for each CSV row"""
+        pass
+    
+    def run_with_dataframe(self, workflow, dataframe):
+        """Execute with pandas DataFrame"""
+        pass
+13. Browser Extension (extension/)
+javascript
+// Chrome/Edge extension for web automation
+class WebRecorder {
+    // Features:
+    // - DOM element capture with XPath/CSS selectors
+    // - Action recording (clicks, inputs, scrolls)
+    // - Screenshot on each action
+    // - Workflow export to JSON
+    // - Sync with desktop app via WebSocket
+}
+14. Visual Scripting (No-Code) (src/visual_scripting/)
+python
+class VisualWorkflowBuilder:
+    """
+    Drag-drop workflow builder.
+    
+    Block types:
+    - Trigger: schedule, file, webhook, hotkey
+    - Vision: detect, read text, wait for element
+    - Action: click, type, scroll, hotkey, file op
+    - Logic: if/else, loop, wait, break, try/catch
+    - Data: variable, clipboard, CSV, JSON, API
+    - Flow: sub-workflow, parallel, sequence
+    """
+    
+    def compile_to_json(self, blocks):
+        """Convert visual blocks to workflow JSON"""
+        pass
+15. Export to Multiple Formats (src/export/)
+python
+class ExportManager:
+    """
+    Export data and reports to multiple formats.
+    
+    Formats:
+    - Video recording (MP4) with annotations
+    - HTML report with charts and timeline
+    - PDF with screenshots
+    - Excel with data and charts
+    - CSV/JSON for raw data
+    - Telegram notification with summary
+    """
+    
+    def export_video(self, debug_session_id, output_path):
+        """Create video from debug session"""
+        pass
+    
+    def export_report(self, workflow_id, format="html"):
+        """Generate execution report"""
+        pass
+📋 P3 - Low Priority (Post v1.0)
+16. Plugin System (src/plugins/)
+python
+class PluginManager:
+    """
+    Load community extensions.
+    
+    Plugin hooks:
+    - on_before_execution
+    - on_after_action
+    - on_element_detected
+    - on_error
+    - on_screenshot
+    - on_workflow_complete
+    """
+    
+    def load_plugin(self, plugin_path):
+        """Load and initialize plugin"""
+        pass
+17. Cloud Model Zoo (src/model_zoo/)
+python
+class ModelZoo:
+    """
+    Share and download trained models.
+    
+    Categories:
+    - Game UI (health bars, minimap, inventory)
+    - Office apps (Excel cells, Word buttons)
+    - Web elements (login forms, modals)
+    - Mobile UI (app icons, gesture areas)
+    - Custom (user-trained)
+    """
+    
+    def download_model(self, category: str, name: str):
+        """Download model from Supabase"""
+        pass
+18. Screen Region Learning (src/vision/region_learning.py)
+python
+class RegionLearner:
+    """
+    Learn element locations over time.
+    
+    Features:
+    - Region memory (cache successful locations)
+    - Adaptive search (expand if not found)
+    - Confidence heatmap (hot zones)
+    - Auto-calibration (resolution changes)
+    """
+    
+    def remember_region(self, element_id, coordinates):
+        """Store successful detection location"""
+        pass
+    
+    def predict_region(self, element_id):
+        """Predict most likely location"""
+        pass
+🔮 Future (Post v1.0 Advanced)
+19. AI Decision Engine
+20. Self-healing Workflows
+21. Reinforcement Learning
+22. Active Learning
+23. Multi-model Ensemble
+24. Custom CNN Training
+25. Multi-Tenancy & User Management
+26. Human-in-the-Loop
+Database Schema (Updated)
+SQLite (Local)
+sql
+-- Workflows
+CREATE TABLE workflows (
+    id TEXT PRIMARY KEY,
+    name TEXT NOT NULL,
+    definition JSON NOT NULL,
+    version INTEGER DEFAULT 1,
+    created_at TIMESTAMP,
+    updated_at TIMESTAMP,
+    sync_status TEXT
+);
+
+-- Executions
+CREATE TABLE executions (
+    id TEXT PRIMARY KEY,
+    workflow_id TEXT,
+    status TEXT,
+    start_time TIMESTAMP,
+    end_time TIMESTAMP,
+    logs JSON,
+    screenshots TEXT,
+    analytics JSON,
+    metrics JSON,
+    FOREIGN KEY (workflow_id) REFERENCES workflows(id)
+);
+
+-- Debug sessions
+CREATE TABLE debug_sessions (
+    id TEXT PRIMARY KEY,
+    execution_id TEXT,
+    step_index INTEGER,
+    variables JSON,
+    screenshot_path TEXT,
+    timestamp TIMESTAMP
+);
+
+-- Monitoring snapshots
+CREATE TABLE monitoring_snapshots (
+    id TEXT PRIMARY KEY,
+    timestamp TIMESTAMP,
+    screenshot_path TEXT,
+    health_status TEXT,
+    detection_result JSON
+);
+
+-- Analytics
+CREATE TABLE analytics (
+    id TEXT PRIMARY KEY,
+    date DATE,
+    metric_name TEXT,
+    value REAL,
+    workflow_id TEXT
+);
+
+-- Profiles
+CREATE TABLE profiles (
+    id TEXT PRIMARY KEY,
+    name TEXT NOT NULL,
+    config JSON NOT NULL,
+    is_active BOOLEAN DEFAULT 0
+);
+Communication Protocol
+WebSocket Messages (Updated)
+json
+// Debug message with screenshot
+{
+    "type": "debug",
+    "action": "click",
+    "coordinates": [100, 200],
+    "screenshot": "base64...",
+    "variables": {"hp": 85},
+    "timestamp": "2024-01-01T12:00:00Z"
+}
+
+// Monitoring alert
+{
+    "type": "monitor",
+    "level": "warning|critical",
+    "message": "Crash detected",
+    "screenshot": "base64...",
+    "recovery_action": "restarting"
+}
+
+// Analytics
+{
+    "type": "analytics",
+    "workflow_id": "abc123",
+    "success": true,
+    "duration_ms": 5000,
+    "steps": 15,
+    "cpu_usage": 25,
+    "memory_usage": 512
+}
+Security Architecture (Updated)
+Layer   Measures
+Authentication  JWT tokens, biometric (mobile), session management, API keys
+Encryption  SQLite encryption, TLS 1.3, credential vault (keyring)
+Authorization   RBAC (admin/user/viewer), workflow-level permissions, API rate limiting
+Privacy Local-first, sensitive data never leaves device, audit logs
+Webhook Security    Signature verification, IP whitelisting
+Performance Optimization
+Component   Optimization
+Vision  ONNX runtime, GPU acceleration, model quantization, caching
+Debug   Screenshot compression, async storage, incremental saving
+Parallel    Thread pooling, process isolation, GPU sharing
+Database    Connection pooling, batch operations, indexing
+Network Compression, binary protocols, caching, WebSocket keep-alive
+UI  Lazy loading, virtual scrolling, isolates (Flutter)
+Execution   Asyncio, thread pooling, process isolation
+text
+
+## 📄 **TODO.md**
+
+```markdown
+# ✅ Development Roadmap (with Priorities)
+
+## Legend
+- ✅ Completed
+- 🔄 In Progress
+- ⬜ Pending
+- 📋 Planned (Post v1.0)
+- 🔮 Future (Advanced)
+
+---
+
+## Phase 0: MVP - 100% Complete ✅
+
+| Task | Status | LOC | Priority |
+|------|--------|-----|----------|
+| YOLOv8 object detection | ✅ | 110 | P0 |
+| PaddleOCR integration | ✅ | 50 | P0 |
+| Template matching | ✅ | 30 | P0 |
+| MSS screen capture | ✅ | 20 | P0 |
+| Human-like mouse (Bezier) | ✅ | 75 | P0 |
+| Global hotkeys | ✅ | 30 | P0 |
+| CustomTkinter dashboard | ✅ | 136 | P0 |
+| Real-time log viewer | ✅ | 20 | P0 |
+| Multi-threading | ✅ | 15 | P0 |
+| Micro-break simulation | ✅ | 20 | P0 |
+
+**Total LOC: 451**
+
+---
+
+## Phase 1: Critical Features (P0) - 0% Complete
+
+*Priority: Must have for stable v1.0*
+
+### 1. Visual Workflow Debugger
+| Task | Status | Effort | Dependencies |
+|------|--------|--------|--------------|
+| Screenshot timeline (before/after actions) | ⬜ | 3 days | Vision module |
+| Action replay with playback controls | ⬜ | 2 days | Screenshot storage |
+| Live overlay (bounding boxes, coordinates) | ⬜ | 2 days | Screen capture |
+| Variable watch window | ⬜ | 2 days | Workflow engine |
+| Step-by-step execution | ⬜ | 3 days | State machine |
+| Debug session storage (SQLite) | ⬜ | 2 days | Database |
+
+**Subtotal: 14 days**
+
+### 2. Smart Wait Strategies
+| Task | Status | Effort | Dependencies |
+|------|--------|--------|--------------|
+| wait_for_element (vision/template) | ⬜ | 3 days | Vision module |
+| wait_for_text (appear/disappear) | ⬜ | 2 days | OCR |
+| wait_for_pixel_color | ⬜ | 1 day | Screen capture |
+| wait_for_sound (game automation) | ⬜ | 2 days | Audio capture (pyaudio) |
+| wait_for_network_idle (web) | ⬜ | 2 days | Playwright |
+| wait_for_animation_complete | ⬜ | 2 days | Vision change detection |
+
+**Subtotal: 12 days**
+
+### 3. Parallel Execution Manager
+| Task | Status | Effort | Dependencies |
+|------|--------|--------|--------------|
+| Thread pool executor | ⬜ | 2 days | Core engine |
+| Workflow queue with priority | ⬜ | 2 days | Queue |
+| Resource monitoring (CPU, memory) | ⬜ | 2 days | psutil |
+| Load balancing strategy | ⬜ | 2 days | Analytics |
+| Deadlock detection | ⬜ | 2 days | State machine |
+| Process isolation for safety | ⬜ | 3 days | multiprocessing |
+
+**Subtotal: 13 days**
+
+### 4. Scheduled Screenshot Monitoring
+| Task | Status | Effort | Dependencies |
+|------|--------|--------|--------------|
+| Periodic screenshot capture (every 30s) | ⬜ | 1 day | Vision module |
+| Baseline comparison algorithm | ⬜ | 2 days | OpenCV |
+| Crash detection (error popup, freeze) | ⬜ | 2 days | Vision + OCR |
+| Auto-recovery (restart bot) | ⬜ | 2 days | Bot core |
+| Alert notification system | ⬜ | 1 day | Commander |
+
+**Subtotal: 8 days**
+
+**Phase 1 Total: 47 days**
+
+---
+
+## Phase 2: High Priority (P1) - 0% Complete
+
+*Priority: Important for v1.0*
+
+### 5. Workflow Recorder
+| Task | Status | Effort | Dependencies |
+|------|--------|--------|--------------|
+| Mouse event recorder (pynput) | ⬜ | 2 days | Input module |
+| Keyboard event recorder | ⬜ | 1 day | Input module |
+| Screenshot on each action | ⬜ | 1 day | Vision module |
+| Recorder → JSON converter | ⬜ | 3 days | Workflow parser |
+| Replay with variable delays | ⬜ | 2 days | Workflow engine |
+| Export/import workflows | ⬜ | 1 day | File I/O |
+
+**Subtotal: 10 days**
+
+### 6. OCR + Vision Hybrid (Advanced)
+| Task | Status | Effort | Dependencies |
+|------|--------|--------|--------------|
+| OCR text → YOLO region detection | ⬜ | 3 days | YOLO + OCR |
+| YOLO detection → OCR value reading | ⬜ | 2 days | YOLO + OCR |
+| Template → OCR → coordinate fallback | ⬜ | 2 days | Template + OCR |
+| 3-stage detection (OCR → YOLO → Template) | ⬜ | 3 days | All vision |
+| Confidence scoring & voting | ⬜ | 2 days | All vision |
+| Hybrid detector API | ⬜ | 1 day | Integration |
+
+**Subtotal: 13 days**
+
+### 7. Multi-Profile Management
+| Task | Status | Effort | Dependencies |
+|------|--------|--------|--------------|
+| Browser fingerprint (user agent, resolution) | ⬜ | 3 days | Playwright |
+| Mouse pattern (speed, curve intensity) | ⬜ | 2 days | Human controller |
+| Typing pattern (WPM, backspace frequency) | ⬜ | 2 days | Human controller |
+| Schedule pattern (active hours, breaks) | ⬜ | 2 days | Scheduler |
+| Profile storage & switching | ⬜ | 2 days | Config manager |
+
+**Subtotal: 11 days**
+
+### 8. Telegram/Discord Commander
+| Task | Status | Effort | Dependencies |
+|------|--------|--------|--------------|
+| Telegram bot integration | ⬜ | 3 days | API |
+| Discord bot integration | ⬜ | 3 days | API |
+| Command parser (/start, /stop, /status) | ⬜ | 2 days | Bot core |
+| Screenshot sharing | ⬜ | 1 day | Vision module |
+| Real-time notification system | ⬜ | 2 days | WebSocket |
+| Authentication & rate limiting | ⬜ | 2 days | Security |
+
+**Subtotal: 13 days**
+
+### 9. API Gateway & Webhook
+| Task | Status | Effort | Dependencies |
+|------|--------|--------|--------------|
+| FastAPI REST endpoints | ⬜ | 3 days | FastAPI |
+| Webhook receiver | ⬜ | 2 days | FastAPI |
+| API authentication (API keys) | ⬜ | 2 days | Security |
+| Webhook signature verification | ⬜ | 2 days | Security |
+| Rate limiting | ⬜ | 1 day | Middleware |
+| API documentation (OpenAPI) | ⬜ | 1 day | FastAPI |
+
+**Subtotal: 11 days**
+
+**Phase 2 Total: 58 days**
+
+---
+
+## Phase 3: Medium Priority (P2) - 0% Complete
+
+*Priority: Nice to have for v1.0*
+
+### 10. Workflow Analytics Dashboard
+| Task | Status | Effort | Dependencies |
+|------|--------|--------|--------------|
+| Execution data collection | ⬜ | 2 days | Database |
+| Success rate by action/workflow | ⬜ | 2 days | Analytics engine |
+| Average execution time | ⬜ | 1 day | Analytics engine |
+| CPU/Memory usage monitoring | ⬜ | 2 days | System metrics (psutil) |
+| Error heatmap visualization | ⬜ | 3 days | UI + analytics |
+| Peak hours analysis | ⬜ | 2 days | Analytics engine |
+| Report generation (PDF/HTML) | ⬜ | 2 days | Export module |
+
+**Subtotal: 14 days**
+
+### 11. Conditional Breakpoints
+| Task | Status | Effort | Dependencies |
+|------|--------|--------|--------------|
+| Value-based breakpoints | ⬜ | 2 days | Workflow engine |
+| Iteration-based breakpoints | ⬜ | 1 day | Loop handling |
+| Time-based breakpoints | ⬜ | 1 day | Scheduler |
+| Screen content breakpoints | ⬜ | 3 days | Vision module |
+| Breakpoint UI (enable/disable) | ⬜ | 2 days | Debugger |
+| Resume/continue execution | ⬜ | 1 day | State machine |
+
+**Subtotal: 10 days**
+
+### 12. Variable Injection & Data-Driven
+| Task | Status | Effort | Dependencies |
+|------|--------|--------|--------------|
+| CSV data source support | ⬜ | 2 days | File parser |
+| JSON data source support | ⬜ | 1 day | JSON parser |
+| Database data source | ⬜ | 3 days | SQLite/Supabase |
+| API data source | ⬜ | 3 days | HTTP client |
+| Variable mapping UI | ⬜ | 2 days | Workflow designer |
+| Batch execution engine | ⬜ | 2 days | Workflow engine |
+
+**Subtotal: 13 days**
+
+### 13. Browser Extension
+| Task | Status | Effort | Dependencies |
+|------|--------|--------|--------------|
+| Chrome extension scaffold | ⬜ | 2 days | JavaScript |
+| DOM element capture | ⬜ | 2 days | Chrome API |
+| XPath/CSS selector generation | ⬜ | 2 days | DOM parsing |
+| Action recording (clicks, inputs) | ⬜ | 3 days | Event listeners |
+| Workflow export | ⬜ | 1 day | JSON |
+| Sync with desktop app | ⬜ | 3 days | WebSocket |
+
+**Subtotal: 13 days**
+
+### 14. Visual Scripting (No-Code)
+| Task | Status | Effort | Dependencies |
+|------|--------|--------|--------------|
+| Block library design | ⬜ | 2 days | UI design |
+| Drag-drop canvas | ⬜ | 3 days | Flutter |
+| Block connection logic | ⬜ | 2 days | Graph |
+| Block → JSON compiler | ⬜ | 2 days | Workflow parser |
+| Variable mapping UI | ⬜ | 2 days | UI |
+| Execution preview | ⬜ | 2 days | Workflow engine |
+
+**Subtotal: 13 days**
+
+### 15. Export to Multiple Formats
+| Task | Status | Effort | Dependencies |
+|------|--------|--------|--------------|
+| CSV/Excel export | ⬜ | 2 days | pandas/openpyxl |
+| JSON export | ⬜ | 1 day | JSON |
+| HTML report with charts | ⬜ | 3 days | matplotlib |
+| PDF export | ⬜ | 3 days | reportlab |
+| Video recording (actions) | ⬜ | 4 days | OpenCV VideoWriter |
+| Telegram notification with report | ⬜ | 2 days | Commander |
+
+**Subtotal: 15 days**
+
+**Phase 3 Total: 78 days**
+
+---
+
+## Phase 4: Low Priority (P3) - 0% Complete
+
+*Priority: Post v1.0, community-driven*
+
+| Feature | Tasks | Effort |
+|---------|-------|--------|
+| Plugin System | API design, loader, hooks, marketplace | 18 days |
+| Cloud Model Zoo | Storage, metadata, download/upload | 11 days |
+| Screen Region Learning | Memory, adaptive search, heatmap | 9 days |
+| Asset Management | Templates, models, credentials | 10 days |
+| Dependency Manager | Workflow deps, circular detection | 8 days |
+| Test Mode & Simulation | Dry run, mock data, sandbox | 12 days |
+
+**Phase 4 Total: 68 days**
+
+---
+
+## Phase 5: Flutter Frontend - 0% Complete
+
+| Task | Status | Effort |
+|------|--------|--------|
+| Flutter project setup (Riverpod) | ⬜ | 2 days |
+| SQLite integration (drift) | ⬜ | 3 days |
+| WebSocket client | ⬜ | 2 days |
+| REST API client (Dio) | ⬜ | 2 days |
+| Dashboard UI | ⬜ | 5 days |
+| Workflow designer (drag-drop) | ⬜ | 7 days |
+| Log viewer with filters | ⬜ | 3 days |
+| Debug overlay | ⬜ | 4 days |
+| Settings & config | ⬜ | 3 days |
+| System tray integration | ⬜ | 2 days |
+| Mobile companion app | ⬜ | 10 days |
+
+**Subtotal: 43 days**
+
+---
+
+## Phase 6: Cloud & Sync - 0% Complete
+
+| Task | Status | Effort |
+|------|--------|--------|
+| FastAPI server | ⬜ | 5 days |
+| WebSocket manager | ⬜ | 3 days |
+| JWT authentication | ⬜ | 3 days |
+| Supabase integration | ⬜ | 3 days |
+| Offline-first sync queue | ⬜ | 4 days |
+| Conflict resolution (LWW + merge) | ⬜ | 4 days |
+| Real-time sync | ⬜ | 3 days |
+| Template marketplace API | ⬜ | 5 days |
+
+**Subtotal: 30 days**
+
+---
+
+## 🔮 Phase 7: Advanced AI (Post v1.0) - Planned
+
+| Feature | Status | Effort | Dependencies |
+|---------|--------|--------|--------------|
+| Multi-model Ensemble | 📋 | 15 days | Vision modules |
+| Custom CNN Training | 📋 | 20 days | Dataset, PyTorch |
+| Active Learning | 📋 | 20 days | User feedback UI |
+| Self-healing Workflows | 📋 | 30 days | Error recovery |
+| AI Decision Engine | 📋 | 40 days | Analytics + ML |
+| Reinforcement Learning | 📋 | 50 days | All previous |
+| Multi-Tenancy | 📋 | 25 days | User management |
+| Human-in-the-Loop | 📋 | 20 days | Commander + UI |
+
+---
+
+## 📈 Statistics
+
+| Phase | Status | Days | LOC (est) |
+|-------|--------|------|-----------|
+| Phase 0 (MVP) | ✅ Complete | - | 451 |
+| Phase 1 (P0) | ⬜ Pending | 47 | ~5,000 |
+| Phase 2 (P1) | ⬜ Pending | 58 | ~6,000 |
+| Phase 3 (P2) | ⬜ Pending | 78 | ~8,000 |
+| Phase 4 (P3) | 📋 Planned | 68 | ~5,000 |
+| Phase 5 (Flutter) | ⬜ Pending | 43 | ~8,000 |
+| Phase 6 (Cloud) | ⬜ Pending | 30 | ~3,000 |
+| **Total v1.0** | **⬜** | **~324 days** | **~35,000** |
+
+---
+
+## 📊 Priority Progress Dashboard
+P0 Features (Critical) ░░░░░░░░░░░░░░░░░░░░ 0% (0/4)
+P1 Features (High) ░░░░░░░░░░░░░░░░░░░░ 0% (0/5)
+P2 Features (Medium) ░░░░░░░░░░░░░░░░░░░░ 0% (0/6)
+P3 Features (Low) ░░░░░░░░░░░░░░░░░░░░ 0% (0/6)
+Flutter UI ░░░░░░░░░░░░░░░░░░░░ 0% (0/11)
+Cloud & Sync ░░░░░░░░░░░░░░░░░░░░ 0% (0/8)
+Advanced AI ░░░░░░░░░░░░░░░░░░░░ 0% (0/8)
+
+OVERALL v1.0 ░░░░░░░░░░░░░░░░░░░░ 0% (0/21 features)
+
+text
+
+---
+
+## 🎯 Next Milestone: Phase 1 (P0) Completion
+
+### Sprint 1 (2 weeks) - Debugger + Smart Wait
+| Task | Days | Status |
+|------|------|--------|
+| Screenshot timeline | 3 | ⬜ |
+| wait_for_element | 3 | ⬜ |
+| Live overlay | 2 | ⬜ |
+| wait_for_text | 2 | ⬜ |
+| Variable watch | 2 | ⬜ |
+
+**Target: 12 days**
+
+### Sprint 2 (2 weeks) - Parallel + Monitoring
+| Task | Days | Status |
+|------|------|--------|
+| Parallel executor | 3 | ⬜ |
+| Scheduled monitoring | 2 | ⬜ |
+| Action replay | 2 | ⬜ |
+| Crash detection | 2 | ⬜ |
+| Step-by-step execution | 3 | ⬜ |
+| Auto-recovery | 2 | ⬜ |
+
+**Target: 14 days**
+
+---
+
+## ✅ Completed Achievements
+
+### March 2026
+- ✅ MVP with 4 modules (451 LOC)
+- ✅ YOLOv8 object detection
+- ✅ PaddleOCR text recognition
+- ✅ Human-like mouse movement
+- ✅ CustomTkinter dashboard
+- ✅ Multi-threading implemented
+
+---
+
+## 📅 Roadmap Timeline
+
+| Phase | Description | ETA | Status |
+|-------|-------------|-----|--------|
+| Phase 0 | MVP | Completed | ✅ |
+| Phase 1 | P0 Features (Debugger, Smart Wait, Parallel, Monitoring) | +8 weeks | ⬜ |
+| Phase 2 | P1 Features (Recorder, Hybrid, Profile, Commander, API) | +16 weeks | ⬜ |
+| Phase 3 | P2 Features (Analytics, Breakpoints, Data-Driven, Extension, Visual Scripting, Export) | +28 weeks | ⬜ |
+| Phase 4 | P3 Features (Plugin, Model Zoo, Region, Asset, Dependency, Test) | +40 weeks | 📋 |
+| Phase 5 | Flutter Frontend | +48 weeks | ⬜ |
+| Phase 6 | Cloud & Sync | +52 weeks | ⬜ |
+| **v1.0 Release** | **All P0-P3 features** | **+52 weeks** | ⬜ |
+| Phase 7 | Advanced AI | TBD | 🔮 |
+
+📄 CONTEXT.md
+markdown
+# 📖 Project Context & Rationale
+
+## Vision
+
+**RPA Framework** aims to democratize automation by providing:
+
+1. **AI-First Approach**: Computer vision adapts to UI changes automatically
+2. **Cross-Platform**: One framework for web, desktop, and mobile
+3. **Open Source**: Free alternative to commercial RPA tools ($500-5000/month)
+4. **Developer-Friendly**: Python API + no-code workflow designer
+5. **Debug-Friendly**: Built-in visual debugging tools (P0 priority)
+6. **Scalable**: Parallel execution for multiple workflows (P0 priority)
+7. **Reliable**: Self-monitoring with auto-recovery (P0 priority)
+
+---
+
+## Why This Project Exists
+
+### The Problem
+| Issue | Impact |
+|-------|--------|
+| Commercial RPA tools cost $500-5000/month | Too expensive for individuals and small teams |
+| Open-source alternatives lack AI and debugging | Hard to use, no visibility into bot decisions |
+| Existing solutions are platform-specific | Need separate tools for web, desktop, mobile |
+| Custom automation scripts are brittle | Break when UI changes, no error recovery |
+| No monitoring or auto-recovery | Bot crashes go unnoticed for hours |
+
+### Our Solution
+- **Free and open-source** - No licensing fees
+- **AI-powered vision** - Adapts to UI changes automatically
+- **Cross-platform** - One framework for all (web, desktop, mobile)
+- **Human-like simulation** - Avoid detection with realistic behavior
+- **Visual debugger (P0)** - See exactly what bot sees
+- **Smart wait (P0)** - No more fixed sleep() calls
+- **Parallel execution (P0)** - Run multiple workflows simultaneously
+- **Self-monitoring (P0)** - Automatic crash detection and recovery
+
+---
+
+## Current State Assessment
+
+### What Works Well ✅
+| Area | Status | Notes |
+|------|--------|-------|
+| **Computer Vision** | ✅ | YOLOv8, PaddleOCR, template matching work reliably |
+| **Human Simulation** | ✅ | Bezier curves + easing create natural movements |
+| **Performance** | ✅ | MSS captures at 60+ FPS, YOLOv8 <100ms on GPU |
+| **Stability** | ✅ | Multi-threaded design prevents UI freezing |
+
+### What Needs Improvement ⚠️
+| Area | Issue | Priority | Impact |
+|------|-------|----------|--------|
+| **Debugging** | No visibility into bot decisions | P0 | Users can't fix errors |
+| **Waiting** | Uses fixed `time.sleep()` | P0 | Unreliable, slow |
+| **Scalability** | Single workflow only | P0 | Can't run multiple bots |
+| **Reliability** | No crash detection | P0 | Bot runs unnoticed |
+| **Workflow** | Hardcoded logic | P1 | Hard to share |
+| **Accuracy** | Single detection method | P1 | Fails often |
+| **Monitoring** | No remote control | P1 | Can't check status |
+| **Analytics** | No performance tracking | P2 | Can't optimize |
+
+---
+
+## Feature Priority Rationale
+
+### P0 - Critical (Must Have for v1.0)
+
+| Feature | Why Critical | Without It |
+|---------|--------------|------------|
+| **Visual Debugger** | Bot automation is "black box". Users need to see what bot sees. | Users can't debug, give up |
+| **Smart Wait** | Fixed sleeps are unreliable and slow. | Bot fails on variable load times |
+| **Parallel Execution** | Need to run multiple workflows (e.g., 1000 accounts). | Can't scale |
+| **Self-Monitoring** | Bot crashes go unnoticed. | Hours of downtime |
+
+**Why these 4 are P0:**
+- **Debugger** + **Smart Wait** = Foundation for reliability
+- **Parallel** + **Monitoring** = Foundation for scalability
+
+### P1 - High Priority (Important for v1.0)
+
+| Feature | Why Important | Without It |
+|---------|---------------|------------|
+| **Workflow Recorder** | Manual coding is tedious (30 min vs 2 min). | High barrier to entry |
+| **Hybrid Vision** | Single method fails often (85% vs 99% accuracy). | Frequent failures |
+| **Multi-Profile** | Essential for avoiding bans. | Banned accounts |
+| **Remote Commander** | Need to monitor without sitting at computer. | Can't check status remotely |
+| **API Gateway** | Integrate with other systems (webhooks). | Can't trigger from external |
+
+### P2 - Medium Priority (Nice to Have)
+
+| Feature | Why Nice to Have |
+|---------|------------------|
+| **Analytics** | Helps optimize performance over time |
+| **Breakpoints** | Makes debugging complex workflows easier |
+| **Data-Driven** | Batch processing (e.g., 1000 accounts) |
+| **Browser Extension** | Makes web automation much easier |
+| **Visual Scripting** | No-code for non-developers |
+| **Export Formats** | Reports, video for audit |
+
+### P3 - Low Priority (Post v1.0)
+
+| Feature | Why Low Priority |
+|---------|------------------|
+| **Plugin System** | Community feature, not core |
+| **Model Zoo** | Nice to have, not essential |
+| **Region Learning** | Optimization, not critical |
+| **Asset Management** | Convenience, not core |
+| **Dependency Manager** | Advanced use case |
+| **Test Mode** | Nice to have |
+
+### 🔮 Future (Post v1.0 Advanced)
+
+| Feature | Why Future | Complexity |
+|---------|------------|------------|
+| **AI Decision Engine** | Complex, requires ML expertise | ⭐⭐⭐⭐⭐ |
+| **Self-healing** | Needs production data to learn | ⭐⭐⭐⭐⭐ |
+| **Reinforcement Learning** | Research-level, not production-ready | ⭐⭐⭐⭐ |
+| **Active Learning** | Requires user feedback loop | ⭐⭐⭐⭐ |
+| **Multi-Tenancy** | Enterprise feature, not core | ⭐⭐⭐⭐ |
+| **Human-in-the-Loop** | Complex approval workflows | ⭐⭐⭐ |
+
+---
+
+## Technical Decisions
+
+### Why Python?
+| Factor | Rationale |
+|--------|-----------|
+| **Ecosystem** | Rich automation libraries (Playwright, PyAutoGUI, OpenCV) |
+| **AI/ML** | Native PyTorch, YOLO, PaddleOCR support |
+| **Speed** | Fast prototyping, good enough performance |
+| **Community** | Large user base, extensive documentation |
+
+### Why Flutter (Future UI)?
+| Factor | Rationale |
+|--------|-----------|
+| **Cross-Platform** | One codebase for Windows, macOS, Linux, iOS, Android |
+| **Performance** | 60fps UI, native compilation |
+| **Modern** | Material Design, hot reload, rich widgets |
+| **Integration** | WebSocket, SQLite, REST clients available |
+
+### Why Supabase?
+| Factor | Rationale |
+|--------|-----------|
+| **PostgreSQL** | Reliable, feature-rich database |
+| **Realtime** | Built-in WebSocket sync |
+| **Auth** | Built-in authentication |
+| **Storage** | File storage for templates, models |
+| **Open Source** | Self-hostable if needed |
+
+### Why Visual Debugger as P0?
+Debugging is the #1 challenge in automation. Users need to know:
+- What did the bot see?
+- Why did it click there?
+- What was the variable value?
+- Where did it fail?
+
+Without visual debugging, users give up. This is why we prioritize it.
+
+---
+
+## Comparison Matrix (Updated)
+
+| Feature | UiPath | Power Automate | Our Framework |
+|---------|--------|----------------|---------------|
+| **Visual Debugger** | ✅ | ✅ | 🔄 (P0) |
+| **Smart Wait** | ✅ | ✅ | 🔄 (P0) |
+| **Parallel Execution** | ✅ | ✅ | 🔄 (P0) |
+| **Self-Monitoring** | ✅ | ✅ | 🔄 (P0) |
+| **Workflow Recorder** | ✅ | ✅ | 🔄 (P1) |
+| **AI Vision** | ✅ (Add-on) | ✅ (Premium) | ✅ (Built-in) |
+| **Hybrid Vision** | ✅ | ✅ | 🔄 (P1) |
+| **Multi-Profile** | ✅ | ✅ | 🔄 (P1) |
+| **Remote Commander** | ✅ | ✅ | 🔄 (P1) |
+| **API Gateway** | ✅ | ✅ | 🔄 (P1) |
+| **Analytics** | ✅ | ✅ | 🔄 (P2) |
+| **Visual Scripting** | ✅ | ✅ | 🔄 (P2) |
+| **Mobile Automation** | ❌ | ❌ | ✅ (ADB) |
+| **Game Automation** | ❌ | ❌ | ✅ |
+| **Open Source** | ❌ | ❌ | ✅ |
+| **Python API** | ❌ | ❌ | ✅ |
+| **Cost** | $$$ | $$ | Free |
+
+---
+
+## Success Metrics (Updated)
+
+| Metric | Target (v1.0) | Current (MVP) | Priority Impact |
+|--------|---------------|---------------|-----------------|
+| Execution Success Rate | >95% | ~85% | P0 + P1 |
+| Object Detection Accuracy | >99% (hybrid) | ~85% | P1 hybrid |
+| Bot Crash Detection | <1 min | Not available | P0 monitoring |
+| Concurrent Workflows | 50+ | 1 | P0 parallel |
+| Time to First Workflow | <5 min | ~30 min | P1 recorder |
+| Debug Time | <2 min | ~15 min | P0 debugger |
+| Remote Response Time | <3 sec | Not available | P1 commander |
+| User Retention | 80% | N/A | P0 debugger critical |
+
+---
+
+## Risk Assessment (Updated)
+
+| Risk | Impact | Mitigation | Priority |
+|------|--------|------------|----------|
+| **No debug visibility** | High | Implement P0 visual debugger first | P0 |
+| **Fixed sleeps fail** | High | Implement P0 smart wait | P0 |
+| **Cannot scale** | High | Implement P0 parallel executor | P0 |
+| **Bot crashes unnoticed** | High | Implement P0 self-monitoring | P0 |
+| **Detection/Ban** | High | Implement P1 multi-profile | P1 |
+| **Low accuracy** | Medium | Implement P1 hybrid vision | P1 |
+| **Cannot monitor remotely** | Medium | Implement P1 commander | P1 |
+| **No external triggers** | Medium | Implement P1 API gateway | P1 |
+| **Performance issues** | Medium | GPU acceleration, optimization | P2 |
+| **Complex AI features** | Low | Move to post v1.0 | 🔮 |
+
+📄 PROGRESS.md
+markdown
+# 📊 Project Progress Tracker
+
+**Last Updated:** 2026-03-23
+
+## Overall Progress: 15% ██░░░░░░░░░░░░░░░░░░
+
+---
+
+## Phase 0: MVP - 100% Complete ✅
+
+| Component | Status | Files | LOC |
+|-----------|--------|-------|-----|
+| Vision Engine | ✅ | `vision_engine.py` | 110 |
+| Human Controller | ✅ | `human_controller.py` | 75 |
+| Bot Core | ✅ | `main.py` | 130 |
+| UI Dashboard | ✅ | `app_ui.py` | 136 |
+| **Total** | **✅** | **4 files** | **451** |
+
+### Features Completed
+- [x] YOLOv8 object detection with custom model
+- [x] PaddleOCR text recognition
+- [x] OpenCV template matching
+- [x] MSS screen capture (60+ FPS)
+- [x] Human-like mouse movement (Bezier + easing)
+- [x] Global hotkey system
+- [x] CustomTkinter dashboard
+- [x] Real-time log viewer
+- [x] Multi-threading
+- [x] Micro-break simulation
+
+---
+
+## Phase 1: Critical Features (P0) - 0% Complete
+
+| Feature | Tasks | Status | Effort |
+|---------|-------|--------|--------|
+| Visual Workflow Debugger | 6 tasks | ⬜ | 14 days |
+| Smart Wait Strategies | 6 tasks | ⬜ | 12 days |
+| Parallel Execution Manager | 6 tasks | ⬜ | 13 days |
+| Scheduled Screenshot Monitoring | 5 tasks | ⬜ | 8 days |
+
+**Progress: 0/23 tasks (0%)**
+
+---
+
+## Phase 2: High Priority (P1) - 0% Complete
+
+| Feature | Tasks | Status | Effort |
+|---------|-------|--------|--------|
+| Workflow Recorder | 6 tasks | ⬜ | 10 days |
+| OCR + Vision Hybrid | 6 tasks | ⬜ | 13 days |
+| Multi-Profile Management | 5 tasks | ⬜ | 11 days |
+| Telegram/Discord Commander | 6 tasks | ⬜ | 13 days |
+| API Gateway & Webhook | 6 tasks | ⬜ | 11 days |
+
+**Progress: 0/29 tasks (0%)**
+
+---
+
+## Phase 3: Medium Priority (P2) - 0% Complete
+
+| Feature | Tasks | Status | Effort |
+|---------|-------|--------|--------|
+| Workflow Analytics Dashboard | 7 tasks | ⬜ | 14 days |
+| Conditional Breakpoints | 6 tasks | ⬜ | 10 days |
+| Variable Injection & Data-Driven | 6 tasks | ⬜ | 13 days |
+| Browser Extension | 6 tasks | ⬜ | 13 days |
+| Visual Scripting (No-Code) | 6 tasks | ⬜ | 13 days |
+| Export to Multiple Formats | 6 tasks | ⬜ | 15 days |
+
+**Progress: 0/37 tasks (0%)**
+
+---
+
+## Phase 4: Low Priority (P3) - 0% Complete
+
+| Feature | Tasks | Status | Effort |
+|---------|-------|--------|--------|
+| Plugin System | 5 tasks | 📋 | 18 days |
+| Cloud Model Zoo | 5 tasks | 📋 | 11 days |
+| Screen Region Learning | 4 tasks | 📋 | 9 days |
+| Asset Management | 4 tasks | 📋 | 10 days |
+| Dependency Manager | 4 tasks | 📋 | 8 days |
+| Test Mode & Simulation | 4 tasks | 📋 | 12 days |
+
+**Progress: 0/26 tasks (0%)**
+
+---
+
+## Phase 5: Flutter Frontend - 0% Complete
+
+| Feature | Tasks | Status | Effort |
+|---------|-------|--------|--------|
+| Project Setup | 1 task | ⬜ | 2 days |
+| Database Integration | 1 task | ⬜ | 3 days |
+| Network Clients | 2 tasks | ⬜ | 4 days |
+| Dashboard UI | 1 task | ⬜ | 5 days |
+| Workflow Designer | 1 task | ⬜ | 7 days |
+| Log Viewer | 1 task | ⬜ | 3 days |
+| Debug Overlay | 1 task | ⬜ | 4 days |
+| Settings | 1 task | ⬜ | 3 days |
+| System Tray | 1 task | ⬜ | 2 days |
+| Mobile App | 1 task | ⬜ | 10 days |
+
+**Progress: 0/11 features (0%)**
+
+---
+
+## Phase 6: Cloud & Sync - 0% Complete
+
+| Feature | Tasks | Status | Effort |
+|---------|-------|--------|--------|
+| FastAPI Server | 1 task | ⬜ | 5 days |
+| WebSocket Manager | 1 task | ⬜ | 3 days |
+| Authentication | 1 task | ⬜ | 3 days |
+| Supabase Integration | 1 task | ⬜ | 3 days |
+| Sync Engine | 2 tasks | ⬜ | 8 days |
+| Marketplace API | 1 task | ⬜ | 5 days |
+
+**Progress: 0/7 features (0%)**
+
+---
+
+## 🔮 Phase 7: Advanced AI (Post v1.0) - Planned
+
+| Feature | Status | Priority |
+|---------|--------|----------|
+| Multi-model Ensemble | 📋 | Future |
+| Custom CNN Training | 📋 | Future |
+| Active Learning | 📋 | Future |
+| Self-healing Workflows | 📋 | Future |
+| AI Decision Engine | 📋 | Future |
+| Reinforcement Learning | 📋 | Future |
+| Multi-Tenancy | 📋 | Future |
+| Human-in-the-Loop | 📋 | Future |
+
+---
+
+## 📈 Statistics
+
+| Metric | Current | Target (v1.0) |
+|--------|---------|---------------|
+| **Total LOC** | 451 | 35,000 |
+| **Python Files** | 4 | 80+ |
+| **Flutter Files** | 0 | 80+ |
+| **P0 Features** | 0/4 | 4/4 |
+| **P1 Features** | 0/5 | 5/5 |
+| **P2 Features** | 0/6 | 6/6 |
+| **P3 Features** | 0/6 | 6/6 |
+| **API Endpoints** | 0 | 30+ |
+| **Database Tables** | 0 | 12 |
+| **Unit Tests** | 0 | 300+ |
+
+---
+
+## 📊 Priority Progress Dashboard
+P0 Features (Critical) ░░░░░░░░░░░░░░░░░░░░ 0% (0/4)
+P1 Features (High) ░░░░░░░░░░░░░░░░░░░░ 0% (0/5)
+P2 Features (Medium) ░░░░░░░░░░░░░░░░░░░░ 0% (0/6)
+P3 Features (Low) ░░░░░░░░░░░░░░░░░░░░ 0% (0/6)
+Flutter UI ░░░░░░░░░░░░░░░░░░░░ 0% (0/11)
+Cloud & Sync ░░░░░░░░░░░░░░░░░░░░ 0% (0/7)
+Advanced AI ░░░░░░░░░░░░░░░░░░░░ 0% (0/8)
+
+OVERALL v1.0 ░░░░░░░░░░░░░░░░░░░░ 0% (0/21 features)
+
+text
+
+---
+
+## 🎯 Next Milestone: Phase 1 (P0) Completion
+
+### Sprint 1 (2 weeks) - Debugger + Smart Wait
+| Task | Days | Status |
+|------|------|--------|
+| Screenshot timeline | 3 | ⬜ |
+| wait_for_element | 3 | ⬜ |
+| Live overlay | 2 | ⬜ |
+| wait_for_text | 2 | ⬜ |
+| Variable watch | 2 | ⬜ |
+
+**Target: 12 days**
+
+### Sprint 2 (2 weeks) - Parallel + Monitoring
+| Task | Days | Status |
+|------|------|--------|
+| Parallel executor | 3 | ⬜ |
+| Scheduled monitoring | 2 | ⬜ |
+| Action replay | 2 | ⬜ |
+| Crash detection | 2 | ⬜ |
+| Step-by-step execution | 3 | ⬜ |
+| Auto-recovery | 2 | ⬜ |
+
+**Target: 14 days**
+
+---
+
+## ✅ Recent Achievements
+
+### March 2026
+- ✅ Completed MVP with 4 modules (451 LOC)
+- ✅ YOLOv8 integration working
+- ✅ PaddleOCR integration working
+- ✅ Human-like mouse movement working
+- ✅ CustomTkinter dashboard functional
+
+---
+
+## 🚧 Known Issues
+
+| Issue | Severity | Priority | Mitigation |
+|-------|----------|----------|------------|
+| No debug visibility | High | P0 | Implement visual debugger |
+| Fixed sleep() calls | High | P0 | Implement smart wait |
+| Single workflow only | High | P0 | Implement parallel executor |
+| No crash detection | High | P0 | Implement monitoring |
+| Hardcoded logic | Medium | P1 | Implement recorder |
+| Single detection method | Medium | P1 | Implement hybrid vision |
+| No remote control | Medium | P1 | Implement commander |
+| No external triggers | Medium | P1 | Implement API gateway |
+| No analytics | Low | P2 | Implement dashboard |
+
+---
+
+## 📅 Roadmap Timeline
+
+| Phase | Description | ETA | Status |
+|-------|-------------|-----|--------|
+| Phase 0 | MVP | Completed | ✅ |
+| Phase 1 | P0 Features (4 features) | +8 weeks | ⬜ |
+| Phase 2 | P1 Features (5 features) | +16 weeks | ⬜ |
+| Phase 3 | P2 Features (6 features) | +28 weeks | ⬜ |
+| Phase 4 | P3 Features (6 features) | +40 weeks | 📋 |
+| Phase 5 | Flutter Frontend | +48 weeks | ⬜ |
+| Phase 6 | Cloud & Sync | +52 weeks | ⬜ |
+| **v1.0 Release** | **All P0-P3 features** | **+52 weeks** | ⬜ |
+| Phase 7 | Advanced AI | TBD | 🔮 |
+
+---
+
+## 🎉 Milestone Checklist
+
+- [ ] **P0 Complete**: Debugger + Smart Wait + Parallel + Monitoring
+- [ ] **P1 Complete**: Recorder + Hybrid + Profile + Commander + API Gateway
+- [ ] **P2 Complete**: Analytics + Breakpoints + Data-Driven + Extension + Visual Scripting + Export
+- [ ] **P3 Complete**: Plugin + Model Zoo + Region Learning + Asset + Dependency + Test Mode
+- [ ] **Flutter UI Beta Release**
+- [ ] **100 GitHub Stars**
+- [ ] **First Community Template**
+- [ ] **v1.0 Release**
+

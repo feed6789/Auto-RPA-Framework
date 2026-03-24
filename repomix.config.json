@@ -15,7 +15,10 @@
       "**/*.png",
       "**/*.jpg",
       "**/*.pyc",
-      ".git/**"
+      ".git/**",
+      "README.md",
+      "ARCHITECTURE.md",
+      "CONTEXT.md"
     ],
     "useGitignore": true,
     "useDefaultPatterns": true
